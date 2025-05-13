@@ -15,6 +15,7 @@ To assist in the selection process, I utilized **Texas Instruments' WEBENCH Desi
 ## Theoretical Background
 
 A **synchronous buck converter** is a type of step-down converter that replaces the freewheeling diode with a **low-side MOSFET**. It operates with two MOSFETs (high-side and low-side) and a PWM controller that ensures precise switching and dead-time management.
+
 <img src="synchronous-working.png" width="600"/>
 
 https://resources.pcb.cadence.com/blog/synchronous-vs-nonsynchronous-dc-dc-conversion
@@ -47,14 +48,10 @@ https://resources.pcb.cadence.com/blog/synchronous-vs-nonsynchronous-dc-dc-conve
 
 $$
 \Delta I_L = \frac{(V_{IN} - V_{OUT}) \times V_{OUT}}{V_{IN} \times L \times f_{SW}}
-
-
 $$
 
 $$
 I_{L(PEAK)} = I_{OUT} + \frac{\Delta I_L}{2}
-
-
 $$
 
 And According to the datasheet the recommended Inductor Value is 4.7uH and calculating the current rating we came to know that the inductor should be able to handle around **4.2A.**
