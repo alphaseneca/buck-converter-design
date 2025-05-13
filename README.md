@@ -41,7 +41,7 @@ https://resources.pcb.cadence.com/blog/synchronous-vs-nonsynchronous-dc-dc-conve
 ### Components Selection
 
 - Buck Converter IC:
-  Used **TPS564257** because it supports a wide input range from 3V to 17V, which covers my system’s required 10V to 14V input. Its built-in enable threshold can be configured using external resistors to ensure the system only turns on when the input is above 10V, protecting against undervoltage. Since the chip does not support an internal overvoltage cutoff at 14V, I included an external circuit to block the input if it exceeds 14V. The converter also offers efficient performance at up to 4A output and includes safety features like overcurrent and thermal shutdown, making it a safe and compact solution for my power supply design.
+  Used **TPS564257** because it supports a wide input range from 3V to 17V, which covers my system’s required 10V to 14V input. Its built-in enable threshold can be configured using external resistors to ensure the system only turns on when the input is above 10V, protecting against undervoltage. The converter also offers efficient performance at up to 4A output and includes safety features like overcurrent and thermal shutdown, making it a safe and compact solution for my power supply design.
 - Inductor Value:
   Target inductor ripple current: **20% to 50% of output current (IOUT)**
   Use this to calculate **inductor value using the standard formula:**
